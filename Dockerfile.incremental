@@ -1,0 +1,14 @@
+FROM richarvey/nginx-php-fpm:1.7.1
+
+LABEL maintainer="Antony Harfield <antonyharfield@gmail.com>"
+
+# Remove old files
+RUN rm -f /etc/nginx/sites-enabled/default.conf /etc/nginx/sites-available/default.conf /etc/nginx/sites-available/default-ssl.conf /start.sh
+
+# Add new files
+ADD conf/nginx-site.conf /etc/nginx/sites-available/default.conf
+ADD conf/nginx-site-ssl.conf /etc/nginx/sites-available/default-ssl.conf
+RUN ln -s /etc/nginx/sites-available/default.conf /etc/nginx/sites-enabled/default.conf
+
+ADD scripts/start.sh /start.sh
+RUN chmod 755 /start.sh
