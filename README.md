@@ -1,4 +1,4 @@
-This is a fork of Antony's [nginx-php-fpm](https://gitlab.com/antonyharfield/nginx-php-fpm) modified with defaults for running Laravel out-of-the-box. Run inside your laravel directory:
+This is a fork of Antony's [nginx-php-fpm](https://github.com/antonyharfield/nginx-php-fpm) modified with defaults for running Laravel out-of-the-box. Run inside your laravel directory:
 ```
 docker run -d -p 80:80 -v "$PWD":/var/www/html jittima/nginx-php-fpm
 ```
@@ -12,7 +12,7 @@ If you have improvements or suggestions please open an issue or pull request on 
 ### Versioning
 | Docker Tag | Git Release | Nginx Version | PHP Version | Alpine Version |
 |-----|-------|-----|--------|--------|
-| latest/1.7.1 | Master Branch |1.16.0 | 7.3.5 | 3.9 |
+| latest/1.7.1 | Master Branch |1.16.0 | 7.1.32 | 3.9 |
 
 For other tags please see: [versioning](https://gitlab.com/ric_harvey/nginx-php-fpm/blob/master/docs/versioning.md)
 
