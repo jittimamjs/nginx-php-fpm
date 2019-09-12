@@ -1,6 +1,6 @@
 This is a fork of Antony's [nginx-php-fpm](https://github.com/antonyharfield/nginx-php-fpm) modified with defaults for running Laravel out-of-the-box. Run inside your laravel directory:
 ```
-docker run -d -p 80:80 -v "$PWD":/var/www/html jittima/nginx-php-fpm
+docker run -d -p 80:80 -v "$PWD":/var/www/html jittima/nginx-php-fpm-laravel
 ```
 
 
