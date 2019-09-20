@@ -218,6 +218,12 @@ if [ -z "$SKIP_COMPOSER" ]; then
     fi
 fi
 
+if [ -z "$SKIP_NPM" ]; then
+  if [ -f "/var/www/html/package.json" ]; then
+    npm install
+  fi
+fi
+
 # Start supervisord and services
 exec /usr/bin/supervisord -n -c /etc/supervisord.conf
 
