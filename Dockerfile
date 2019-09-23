@@ -273,6 +273,8 @@ RUN chmod 755 /usr/bin/pull && chmod 755 /usr/bin/push && chmod 755 /usr/bin/let
 ADD src/ /var/www/html/
 ADD errors/ /var/www/errors
 
+# Install npm
+RUN apk add --update nodejs npm
 
 EXPOSE 443 80
 

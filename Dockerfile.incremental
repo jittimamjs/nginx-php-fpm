@@ -2,9 +2,6 @@ FROM richarvey/nginx-php-fpm:1.7.1
 
 LABEL maintainer="Antony Harfield <antonyharfield@gmail.com>"
 
-# Install npm
-RUN apk add --update nodejs npm
-
 # Remove old files
 RUN rm -f /etc/nginx/sites-enabled/default.conf /etc/nginx/sites-available/default.conf /etc/nginx/sites-available/default-ssl.conf /start.sh
 
